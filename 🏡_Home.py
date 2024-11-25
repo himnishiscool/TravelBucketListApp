@@ -4,7 +4,6 @@ import requests  # For API requests
 import json
 import os
 
-# Path to the JSON file
 DATA_FILE = "travel_data.json"
 
 # Function to load data from JSON
@@ -13,12 +12,8 @@ def load_data():
         with open(DATA_FILE, "r") as f:
             return json.load(f)
     else:
-        return {
-            'bucket_list': [],
-            'trips_data': [],
-            'reviews_data': [],
-            'packing_list': []
-        }
+        with open(DATA_FILE, "w") as f:
+            pass
 
 # Function to save data to JSON
 def save_data(data):
