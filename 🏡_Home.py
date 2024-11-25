@@ -181,7 +181,7 @@ def weather_forecast_page():
                     lng = geo_data['results'][0]['geometry']['lng']
 
                     # Step 2: Use OpenWeatherMap to get the weather forecast (still using OpenWeatherMap)
-                    api_key = "YOUR_API_KEY"  # Replace with your OpenWeatherMap API key
+                    api_key = "01ee519825cef1fab35e5460b534a7eb"  # Replace with your OpenWeatherMap API key
                     weather_url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lng}&units=metric&appid={api_key}"
                     weather_response = requests.get(weather_url)
                     weather_data = weather_response.json()
